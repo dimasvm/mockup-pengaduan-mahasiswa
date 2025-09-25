@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Stitch Design</title>
+        <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+        <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link
+            crossorigin=""
+            href="https://fonts.gstatic.com"
+            rel="preconnect"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
+            rel="stylesheet"
+        />
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: "#137fec",
+                            "background-light": "#f6f7f8",
+                            "background-dark": "#101922",
+                        },
+                        fontFamily: {
+                            display: ["Inter"],
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.25rem",
+                            lg: "0.5rem",
+                            xl: "0.75rem",
+                            full: "9999px",
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            .form-select {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+                background-position: right 0.5rem center;
+                background-repeat: no-repeat;
+                background-size: 1.5em 1.5em;
+                padding-right: 2.5rem;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        </style>
+    </head>
+    <body class="bg-background-light dark:bg-background-dark font-display">
+        <div class="relative flex min-h-screen w-full flex-col">
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-primary/20 dark:border-primary/30 px-10 py-4"
+            >
+                <div class="flex items-center gap-4 text-black dark:text-white">
+                    <svg
+                        class="h-8 w-8 text-primary"
+                        fill="none"
+                        viewBox="0 0 48 48"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z"
+                            fill="currentColor"
+                        ></path>
+                    </svg>
+                    <h2 class="text-xl font-bold">StudentCare</h2>
+                </div>
+                <div class="flex flex-1 items-center justify-end gap-8">
+                    <nav class="flex items-center gap-9">
+                        <a
+                            class="text-sm font-medium text-black dark:text-white hover:text-primary dark:hover:text-primary transition-colors"
+                            href="dashboard.html"
+                            >Beranda</a
+                        >
+                        <a class="text-sm font-medium text-primary" href="#"
+                            >Pengaduan Saya</a
+                        >
+                        <a
+                            class="text-sm font-medium text-black dark:text-white hover:text-primary dark:hover:text-primary transition-colors"
+                            href="#"
+                            >FAQ</a
+                        >
+                    </nav>
+                    <div
+                        class="aspect-square w-10 h-10 rounded-full bg-cover bg-center"
+                        style="
+                            background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDVhzOQI1ix2iNjoTOlkMm1tnxa1KopUVmStj1pzTvrzbOmfPCdpXeK27Zt6y5nVvYyUtaQK0gRdD6Xis_kQmhM9YdThVZAhA3k3MNHbecwCOWZOugDB7xxJ25jOCKefcvxxMsWvaw021SzZwEz40347FKDYz6UtMbHkI3ugmaYP4TmnQn4Sd6h4435Hr8YiImar5uE9zxSNjCags41bGKGgBVZ_1lKaAdMHCE5FOUiPw-Ch2gIUzNSvdsrSTDw6SZcSOmlU3VICSQ3&quot;);
+                        "
+                    ></div>
+                </div>
+            </header>
+            <main class="flex flex-1 justify-center py-10 px-4 sm:px-6 lg:px-8">
+                <div class="w-full max-w-2xl space-y-8">
+                    <div class="text-center">
+                        <h1
+                            class="text-4xl font-bold tracking-tight text-black dark:text-white"
+                        >
+                            Formulir Pengaduan
+                        </h1>
+                        <p
+                            class="mt-3 text-base text-black/60 dark:text-white/60"
+                        >
+                            Silakan isi formulir di bawah ini untuk mengajukan
+                            pengaduan Anda.
+                        </p>
+                    </div>
+                    <form
+                        class="space-y-6 bg-white dark:bg-background-dark p-8 rounded-lg shadow-md border border-primary/20 dark:border-primary/30"
+                    >
+                        <div class="space-y-2">
+                            <label
+                                class="text-sm font-medium text-black dark:text-white"
+                                for="complaint-type"
+                                >Jenis Pengaduan</label
+                            >
+                            <select
+                                class="form-select w-full rounded border border-primary/40 dark:border-primary/50 bg-background-light dark:bg-background-dark text-black dark:text-white focus:ring-primary focus:border-primary"
+                                id="complaint-type"
+                                name="complaint-type"
+                            >
+                                <option>Pilih Jenis Pengaduan</option>
+                                <option value="akademik">Akademik</option>
+                                <option value="fasilitas">Fasilitas</option>
+                                <option value="layanan">
+                                    Layanan Mahasiswa
+                                </option>
+                                <option value="lainnya">Lainnya</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label
+                                class="text-sm font-medium text-black dark:text-white"
+                                for="complaint-title"
+                                >Judul Pengaduan</label
+                            >
+                            <input
+                                class="w-full rounded border border-primary/40 dark:border-primary/50 bg-background-light dark:bg-background-dark text-black dark:text-white placeholder-black/40 dark:placeholder-white/40 focus:ring-primary focus:border-primary"
+                                id="complaint-title"
+                                name="complaint-title"
+                                placeholder="Cth: Masalah pada sistem KRS"
+                                type="text"
+                            />
+                        </div>
+                        <div class="space-y-2">
+                            <label
+                                class="text-sm font-medium text-black dark:text-white"
+                                for="complaint-description"
+                                >Deskripsi Pengaduan</label
+                            >
+                            <textarea
+                                class="w-full rounded border border-primary/40 dark:border-primary/50 bg-background-light dark:bg-background-dark text-black dark:text-white placeholder-black/40 dark:placeholder-white/40 focus:ring-primary focus:border-primary"
+                                id="complaint-description"
+                                name="complaint-description"
+                                placeholder="Jelaskan detail pengaduan Anda di sini..."
+                                rows="6"
+                            ></textarea>
+                        </div>
+                        <div class="space-y-2">
+                            <label
+                                class="text-sm font-medium text-black dark:text-white"
+                                for="attachment"
+                                >Unggah Lampiran (opsional)</label
+                            >
+                            <div
+                                class="flex items-center justify-center w-full"
+                            >
+                                <label
+                                    class="flex flex-col items-center justify-center w-full h-32 border-2 border-primary/40 dark:border-primary/50 border-dashed rounded-lg cursor-pointer bg-background-light dark:bg-background-dark hover:bg-primary/10 dark:hover:bg-primary/20"
+                                    for="dropzone-file"
+                                >
+                                    <div
+                                        class="flex flex-col items-center justify-center pt-5 pb-6"
+                                    >
+                                        <svg
+                                            aria-hidden="true"
+                                            class="w-8 h-8 mb-4 text-black/50 dark:text-white/50"
+                                            fill="none"
+                                            viewBox="0 0 20 16"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
+                                                stroke="currentColor"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                            ></path>
+                                        </svg>
+                                        <p
+                                            class="mb-2 text-sm text-black/50 dark:text-white/50"
+                                        >
+                                            <span class="font-semibold"
+                                                >Klik untuk mengunggah</span
+                                            >
+                                            atau seret dan lepas
+                                        </p>
+                                        <p
+                                            class="text-xs text-black/50 dark:text-white/50"
+                                        >
+                                            SVG, PNG, JPG or GIF (MAX.
+                                            800x400px)
+                                        </p>
+                                    </div>
+                                    <input
+                                        class="hidden"
+                                        id="dropzone-file"
+                                        type="file"
+                                    />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="flex justify-end pt-4">
+                            <button
+                                class="w-full sm:w-auto rounded bg-primary px-6 py-3 text-sm font-bold text-white shadow-md hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50 dark:focus:ring-offset-background-dark"
+                                type="submit"
+                            >
+                                Kirim Pengaduan
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

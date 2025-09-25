@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Masuk - CampusConnect</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link
+            crossorigin=""
+            href="https://fonts.gstatic.com"
+            rel="preconnect"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
+            rel="stylesheet"
+        />
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: "#137fec",
+                            "background-light": "#f6f7f8",
+                            "background-dark": "#101922",
+                        },
+                        fontFamily: {
+                            display: ["Inter", "sans-serif"],
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.25rem",
+                            lg: "0.5rem",
+                            xl: "0.75rem",
+                            full: "9999px",
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            .form-input::placeholder {
+                color: #6b7280;
+            }
+            .dark .form-input::placeholder {
+                color: #9ca3af;
+            }
+        </style>
+    </head>
+    <body
+        class="bg-background-light dark:bg-background-dark font-display text-[#1f2937] dark:text-gray-200"
+    >
+        <div class="flex flex-col min-h-screen">
+            <header class="border-b border-gray-200 dark:border-gray-700">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex items-center justify-between h-16">
+                        <div class="flex items-center gap-3">
+                            <div class="text-primary h-6 w-6">
+                                <svg
+                                    fill="none"
+                                    viewBox="0 0 48 48"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M6 6H42L36 24L42 42H6L12 24L6 6Z"
+                                        fill="currentColor"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <h1
+                                class="text-xl font-bold text-gray-900 dark:text-white"
+                            >
+                                CampusConnect
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main
+                class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
+            >
+                <div class="w-full max-w-md space-y-8">
+                    <div>
+                        <h2
+                            class="mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-white"
+                        >
+                            Masuk ke akun Anda
+                        </h2>
+                        <p
+                            class="mt-2 text-center text-sm text-gray-600 dark:text-gray-400"
+                        >
+                            Atau
+                            <a
+                                class="font-medium text-primary hover:text-primary/80"
+                                href="#"
+                            >
+                                daftar baru
+                            </a>
+                        </p>
+                    </div>
+                    <form action="#" class="mt-8 space-y-6" method="POST">
+                        <input name="remember" type="hidden" value="true" />
+                        <div class="rounded-lg shadow-sm -space-y-px">
+                            <div>
+                                <label class="sr-only" for="email-address"
+                                    >Nama pengguna atau email</label
+                                >
+                                <input
+                                    autocomplete="email"
+                                    class="form-input appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white rounded-t-lg focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
+                                    id="email-address"
+                                    name="email"
+                                    placeholder="Nama pengguna atau email"
+                                    required=""
+                                    type="email"
+                                />
+                            </div>
+                            <div>
+                                <label class="sr-only" for="password"
+                                    >Kata sandi</label
+                                >
+                                <input
+                                    autocomplete="current-password"
+                                    class="form-input appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white rounded-b-lg focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
+                                    id="password"
+                                    name="password"
+                                    placeholder="Kata sandi"
+                                    required=""
+                                    type="password"
+                                />
+                            </div>
+                        </div>
+                        <!--<div class="flex items-center justify-end">
+                            <div class="text-sm">
+                                <a
+                                    class="font-medium text-primary hover:text-primary/80"
+                                    href="#"
+                                >
+                                    Lupa kata sandi?
+                                </a>
+                            </div>
+                        </div>-->
+                        <div>
+                            <a
+                                href="dashboard.html"
+                                class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark focus:ring-primary"
+                                type="submit"
+                            >
+                                Masuk
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

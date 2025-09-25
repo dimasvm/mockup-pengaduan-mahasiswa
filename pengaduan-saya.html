@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>CampusCare - Pengaduan Saya</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link
+            crossorigin=""
+            href="https://fonts.gstatic.com"
+            rel="preconnect"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+            rel="stylesheet"
+        />
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: "#137fec",
+                            "background-light": "#f6f7f8",
+                            "background-dark": "#101922",
+                            "foreground-light": "#101922",
+                            "foreground-dark": "#f6f7f8",
+                            "subtle-light": "#e4e6e8",
+                            "subtle-dark": "#1a242e",
+                            "muted-light": "#6b7280",
+                            "muted-dark": "#9ca3af",
+                        },
+                        fontFamily: {
+                            display: ["Inter", "sans-serif"],
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.25rem",
+                            lg: "0.5rem",
+                            xl: "0.75rem",
+                            full: "9999px",
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body
+        class="font-display bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark"
+    >
+        <div class="flex flex-col min-h-screen">
+            <header
+                class="bg-background-light dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-10 border-b border-subtle-light dark:border-subtle-dark"
+            >
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex items-center justify-between h-16">
+                        <div class="flex items-center space-x-8">
+                            <a class="flex items-center space-x-2" href="#">
+                                <span
+                                    class="material-symbols-outlined text-primary text-3xl"
+                                    >school</span
+                                >
+                                <span class="text-xl font-bold"
+                                    >CampusCare</span
+                                >
+                            </a>
+                            <nav class="hidden md:flex items-center space-x-6">
+                                <a
+                                    class="text-sm font-medium hover:text-primary transition-colors"
+                                    href="dashboard.html"
+                                    >Beranda</a
+                                >
+                                <a
+                                    class="text-sm font-medium text-primary border-b-2 border-primary"
+                                    href="#"
+                                    >Pengaduan Saya</a
+                                >
+                                <a
+                                    class="text-sm font-medium hover:text-primary transition-colors"
+                                    href="#"
+                                    >Bantuan</a
+                                >
+                            </nav>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="hidden md:block relative">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-muted-light dark:text-muted-dark"
+                                    >search</span
+                                >
+                                <input
+                                    class="bg-subtle-light dark:bg-subtle-dark border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary focus:outline-none w-48"
+                                    placeholder="Cari..."
+                                    type="text"
+                                />
+                            </div>
+                            <button
+                                class="md:hidden p-2 rounded-full hover:bg-subtle-light dark:hover:bg-subtle-dark"
+                            >
+                                <span class="material-symbols-outlined"
+                                    >search</span
+                                >
+                            </button>
+                            <img
+                                alt="User avatar"
+                                class="w-10 h-10 rounded-full"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuChtI_ymPhlBarRCBeY8ofO4aVYjUFMNLWrv8g6CJlKn9RWBEM4v7PTK-JbtsqggeYpm4wwccx6TztTeaMZGUQt_JohLmOrrrlZ00NheR5XYl1Ly3Z5aulvUR4D-Fo5u7F9n8zzKkiH3Vo4zPV3Qs1TCopt4v4kNaa6WwM9GfOIhStHk2EfNvGNNebfIpEveP5evY0ttq0h4h1A7ZQoCcD3ucIbUmk7kQW9rE9XIOcvLeJaLvigI2dtUDJMu-ftcxMvYa7EfbsudgI2"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="max-w-5xl mx-auto">
+                    <div
+                        class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8"
+                    >
+                        <h1 class="text-3xl font-bold tracking-tight">
+                            Daftar Pengaduan
+                        </h1>
+                        <button
+                            class="mt-4 sm:mt-0 flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors"
+                        >
+                            <span class="material-symbols-outlined">add</span>
+                            <span>Buat Pengaduan Baru</span>
+                        </button>
+                    </div>
+                    <div
+                        class="bg-background-light dark:bg-subtle-dark/50 rounded-xl shadow-sm p-6"
+                    >
+                        <div class="flex flex-col md:flex-row gap-4 mb-6">
+                            <div class="relative flex-grow">
+                                <span
+                                    class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-muted-light dark:text-muted-dark"
+                                    >search</span
+                                >
+                                <input
+                                    class="w-full bg-subtle-light dark:bg-background-dark border border-subtle-light dark:border-subtle-dark rounded-lg pl-12 pr-4 py-3 focus:ring-2 focus:ring-primary focus:outline-none"
+                                    placeholder="Cari berdasarkan judul pengaduan..."
+                                    type="text"
+                                />
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium"
+                                >
+                                    Semua
+                                </button>
+                                <button
+                                    class="bg-subtle-light dark:bg-subtle-dark text-foreground-light dark:text-foreground-dark px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors"
+                                >
+                                    Menunggu
+                                </button>
+                                <button
+                                    class="bg-subtle-light dark:bg-subtle-dark text-foreground-light dark:text-foreground-dark px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors"
+                                >
+                                    Dalam Proses
+                                </button>
+                                <button
+                                    class="bg-subtle-light dark:bg-subtle-dark text-foreground-light dark:text-foreground-dark px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors"
+                                >
+                                    Selesai
+                                </button>
+                            </div>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead>
+                                    <tr
+                                        class="border-b border-subtle-light dark:border-subtle-dark"
+                                    >
+                                        <th
+                                            class="p-4 text-sm font-semibold text-muted-light dark:text-muted-dark uppercase"
+                                        >
+                                            Judul
+                                        </th>
+                                        <th
+                                            class="p-4 text-sm font-semibold text-muted-light dark:text-muted-dark uppercase"
+                                        >
+                                            Tanggal
+                                        </th>
+                                        <th
+                                            class="p-4 text-sm font-semibold text-muted-light dark:text-muted-dark uppercase text-center"
+                                        >
+                                            Status
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr
+                                        class="border-b border-subtle-light dark:border-subtle-dark hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 transition-colors"
+                                    >
+                                        <td
+                                            class="p-4 font-medium hover:text-primary"
+                                        >
+                                            <a href="detail-pengajuan.html">
+                                                Fasilitas Perpustakaan Rusak
+                                            </a>
+                                        </td>
+                                        <td
+                                            class="p-4 text-muted-light dark:text-muted-dark"
+                                        >
+                                            15 Mei 2024
+                                        </td>
+                                        <td class="p-4 text-center">
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/20 text-primary"
+                                            >
+                                                Menunggu
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        class="border-b border-subtle-light dark:border-subtle-dark hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 transition-colors"
+                                    >
+                                        <td
+                                            class="p-4 font-medium hover:text-primary"
+                                        >
+                                            <a href="detail-pengajuan.html">
+                                                Koneksi Wi-Fi Lambat di Asrama
+                                            </a>
+                                        </td>
+                                        <td
+                                            class="p-4 text-muted-light dark:text-muted-dark"
+                                        >
+                                            20 April 2024
+                                        </td>
+                                        <td class="p-4 text-center">
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-yellow-500/20 text-yellow-500"
+                                            >
+                                                Dalam Proses
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        class="border-b border-subtle-light dark:border-subtle-dark hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 transition-colors"
+                                    >
+                                        <td
+                                            class="p-4 font-medium hover:text-primary"
+                                        >
+                                            <a href="detail-pengajuan.html">
+                                                Kebersihan Toilet Kurang
+                                            </a>
+                                        </td>
+                                        <td
+                                            class="p-4 text-muted-light dark:text-muted-dark"
+                                        >
+                                            5 April 2024
+                                        </td>
+                                        <td class="p-4 text-center">
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-500"
+                                            >
+                                                Selesai
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        class="border-b border-subtle-light dark:border-subtle-dark hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 transition-colors"
+                                    >
+                                        <td
+                                            class="p-4 font-medium hover:text-primary"
+                                        >
+                                            <a href="detail-pengajuan.html">
+                                                Masalah dengan Sistem
+                                                Pendaftaran
+                                            </a>
+                                        </td>
+                                        <td
+                                            class="p-4 text-muted-light dark:text-muted-dark"
+                                        >
+                                            1 Maret 2024
+                                        </td>
+                                        <td class="p-4 text-center">
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-500"
+                                            >
+                                                Selesai
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 transition-colors"
+                                    >
+                                        <td
+                                            class="p-4 font-medium hover:text-primary"
+                                        >
+                                            <a href="detail-pengajuan.html">
+                                                Kantin Tidak Higienis
+                                            </a>
+                                        </td>
+                                        <td
+                                            class="p-4 text-muted-light dark:text-muted-dark"
+                                        >
+                                            10 Februari 2024
+                                        </td>
+                                        <td class="p-4 text-center">
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/20 text-primary"
+                                            >
+                                                Menunggu
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer
+                class="bg-background-light dark:bg-subtle-dark/50 mt-auto border-t border-subtle-light dark:border-subtle-dark"
+            >
+                <div
+                    class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center text-sm text-muted-light dark:text-muted-dark"
+                >
+                    © 2024 CampusCare. All rights reserved.
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

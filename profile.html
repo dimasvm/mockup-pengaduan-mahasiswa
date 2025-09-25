@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Profil Mahasiswa</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link
+            crossorigin=""
+            href="https://fonts.gstatic.com"
+            rel="preconnect"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap"
+            rel="stylesheet"
+        />
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: "#137fec",
+                            "background-light": "#f6f7f8",
+                            "background-dark": "#101922",
+                            "foreground-light": "#0d141b",
+                            "foreground-dark": "#f0f2f5",
+                            "subtle-light": "#4c739a",
+                            "subtle-dark": "#a1b2c3",
+                            "border-light": "#e7edf3",
+                            "border-dark": "#2a3b4c",
+                        },
+                        fontFamily: {
+                            display: ["Inter", "sans-serif"],
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.5rem",
+                            lg: "0.75rem",
+                            full: "9999px",
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            .switch-toggle:checked {
+                background-color: #137fec;
+            }
+        </style>
+    </head>
+    <body
+        class="font-display bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark"
+    >
+        <div class="flex flex-col min-h-screen">
+            <header
+                class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-border-light dark:border-border-dark"
+            >
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex items-center justify-between h-16">
+                        <div class="flex items-center gap-4">
+                            <svg
+                                class="h-6 w-6 text-primary"
+                                fill="none"
+                                viewBox="0 0 48 48"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M6 6H42L36 24L42 42H6L12 24L6 6Z"
+                                    fill="currentColor"
+                                ></path>
+                            </svg>
+                            <h1 class="text-xl font-bold">CampusConnect</h1>
+                        </div>
+                        <nav class="hidden md:flex items-center gap-8">
+                            <a
+                                class="text-sm font-medium hover:text-primary transition-colors"
+                                href="dashboard.html"
+                                >Beranda</a
+                            >
+                            <a
+                                class="text-sm font-medium hover:text-primary transition-colors"
+                                href="pengaduan-saya.html"
+                                >Pengaduan</a
+                            >
+                            <a
+                                class="text-sm font-medium hover:text-primary transition-colors"
+                                href="#"
+                                >Forum</a
+                            >
+                            <a
+                                class="text-sm font-medium hover:text-primary transition-colors"
+                                href="#"
+                                >Bantuan</a
+                            >
+                        </nav>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-cover bg-center"
+                                style="
+                                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBAvjnQ11UULAQhkS-HNUWh1-rVXHCnCQ8mU-bCZqkSEE9ozLeeE9a2B4TXrrBF2311Tk3hY-DhPhYr6XDf-QJHZt40b3av7STU_44WK2mo57oud4Nw9hbCldloH1tAlnRVxz3osICYmQySh4QxZvr6xzx3VnJ52D8gp1GbBOBsYq4ogCPqfnAWMjCPlriLB6XYfWwzSmDxJ0d4qfZgkfj3XQnu9JyZmQM4GF-sCLQR4i1Pk9z0I5zWuTCPXqH90GL4m161Tx5Jucm6&quot;);
+                                "
+                            ></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-3xl font-bold mb-8">Profil Saya</h1>
+                    <div
+                        class="bg-background-light dark:bg-background-dark/50 rounded-lg shadow-sm border border-border-light dark:border-border-dark p-6 sm:p-8 mb-8"
+                    >
+                        <div
+                            class="flex flex-col sm:flex-row items-center gap-6"
+                        >
+                            <div class="relative">
+                                <div
+                                    class="w-32 h-32 rounded-full bg-cover bg-center"
+                                    style="
+                                        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDqIO_NTdErqArFhJ2Mos9X3-18bJ6DBwu_YWcUp-AKxvKpqYbwjksy3iW8uT6cLepF5xHpJB9nvOyp_3Mt7v5_4d766MUXgGCcmnhNRNYeTVhVoRKcP6fUW3fJesKkctdmWehdq116Gg6plD1oK8NUe27Vk0PCWsfgQugK33txSunFu4d3LYQt4dOHgciD3ttUiqCRF2K8kMXEdtj0FcoJqTpVGhEnncaaByBe_4yk71ustIytGpNW1IM1OVSrZOHNzHgX3KLwcBHa&quot;);
+                                    "
+                                ></div>
+                                <button
+                                    class="absolute bottom-1 right-1 bg-primary text-white rounded-full p-2 hover:bg-primary/90 transition-colors"
+                                >
+                                    <svg
+                                        class="h-4 w-4"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"
+                                        ></path>
+                                        <path
+                                            clip-rule="evenodd"
+                                            d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
+                                            fill-rule="evenodd"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="text-center sm:text-left">
+                                <h2 class="text-2xl font-bold">Anya Wijaya</h2>
+                                <p
+                                    class="text-subtle-light dark:text-subtle-dark"
+                                >
+                                    Mahasiswa
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        <div class="lg:col-span-2 space-y-8">
+                            <div
+                                class="bg-background-light dark:bg-background-dark/50 rounded-lg shadow-sm border border-border-light dark:border-border-dark p-6 sm:p-8"
+                            >
+                                <h3 class="text-xl font-bold mb-6">
+                                    Informasi Pribadi
+                                </h3>
+                                <div
+                                    class="grid grid-cols-1 sm:grid-cols-2 gap-6"
+                                >
+                                    <div>
+                                        <label
+                                            class="block text-sm font-medium mb-2"
+                                            for="fullName"
+                                            >Nama Lengkap</label
+                                        >
+                                        <input
+                                            class="w-full bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                                            id="fullName"
+                                            type="text"
+                                            value="Anya Wijaya"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label
+                                            class="block text-sm font-medium mb-2"
+                                            for="nim"
+                                            >Nomor Induk Mahasiswa (NIM)</label
+                                        >
+                                        <input
+                                            class="w-full bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                                            id="nim"
+                                            type="text"
+                                            value="123456789"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label
+                                            class="block text-sm font-medium mb-2"
+                                            for="email"
+                                            >Email</label
+                                        >
+                                        <input
+                                            class="w-full bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                                            id="email"
+                                            type="email"
+                                            value="anya.wijaya@campus.ac.id"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label
+                                            class="block text-sm font-medium mb-2"
+                                            for="phone"
+                                            >Nomor Telepon</label
+                                        >
+                                        <input
+                                            class="w-full bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                                            id="phone"
+                                            type="tel"
+                                            value="081234567890"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-background-light dark:bg-background-dark/50 rounded-lg shadow-sm border border-border-light dark:border-border-dark p-6 sm:p-8"
+                            >
+                                <h3 class="text-xl font-bold mb-6">Keamanan</h3>
+                                <button
+                                    class="bg-primary/10 dark:bg-primary/20 text-primary font-medium py-2.5 px-5 rounded-lg hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors"
+                                >
+                                    Ubah Kata Sandi
+                                </button>
+                            </div>
+                        </div>
+                        <!--<div class="lg:col-span-1 space-y-8">
+                            <div
+                                class="bg-background-light dark:bg-background-dark/50 rounded-lg shadow-sm border border-border-light dark:border-border-dark p-6 sm:p-8"
+                            >
+                                <h3 class="text-xl font-bold mb-6">
+                                    Pengaturan Notifikasi
+                                </h3>
+                                <div class="space-y-6">
+                                    <div
+                                        class="flex items-center justify-between"
+                                    >
+                                        <div>
+                                            <p class="font-medium">
+                                                Notifikasi Email
+                                            </p>
+                                            <p
+                                                class="text-sm text-subtle-light dark:text-subtle-dark"
+                                            >
+                                                Pembaruan pengaduan via email.
+                                            </p>
+                                        </div>
+                                        <label
+                                            class="relative inline-flex items-center cursor-pointer"
+                                        >
+                                            <input
+                                                class="sr-only peer switch-toggle"
+                                                type="checkbox"
+                                            />
+                                            <div
+                                                class="w-11 h-6 bg-border-light dark:bg-border-dark peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:border-gray-300 dark:after:border-gray-600 after:rounded-full after:h-5 after:w-5 after:transition-all"
+                                            ></div>
+                                        </label>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between"
+                                    >
+                                        <div>
+                                            <p class="font-medium">
+                                                Notifikasi Push
+                                            </p>
+                                            <p
+                                                class="text-sm text-subtle-light dark:text-subtle-dark"
+                                            >
+                                                Pembaruan pengaduan via push.
+                                            </p>
+                                        </div>
+                                        <label
+                                            class="relative inline-flex items-center cursor-pointer"
+                                        >
+                                            <input
+                                                checked=""
+                                                class="sr-only peer switch-toggle"
+                                                type="checkbox"
+                                            />
+                                            <div
+                                                class="w-11 h-6 bg-border-light dark:bg-border-dark peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:border-gray-300 dark:after:border-gray-600 after:rounded-full after:h-5 after:w-5 after:transition-all"
+                                            ></div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
+                    <div class="mt-8 flex justify-end">
+                        <button
+                            class="bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20"
+                        >
+                            Simpan Perubahan
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
