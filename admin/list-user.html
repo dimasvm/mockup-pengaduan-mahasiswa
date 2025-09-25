@@ -1,0 +1,499 @@
+<!doctype html>
+<html class="dark" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Aspirasi Kampus</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link
+            crossorigin=""
+            href="https://fonts.gstatic.com/"
+            rel="preconnect"
+        />
+        <link
+            as="style"
+            href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter:wght@400;500;700;900"
+            onload="this.rel='stylesheet'"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+            rel="stylesheet"
+        />
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: "#1173d4",
+                            "background-light": "#f6f7f8",
+                            "background-dark": "#101922",
+                        },
+                        fontFamily: {
+                            display: ["Inter"],
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.25rem",
+                            lg: "0.5rem",
+                            xl: "0.75rem",
+                            full: "9999px",
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body
+        class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200"
+    >
+        <div class="flex min-h-screen">
+            <aside
+                class="w-64 shrink-0 bg-background-light dark:bg-background-dark border-r border-gray-200 dark:border-gray-800 flex flex-col"
+            >
+                <div class="p-6">
+                    <h1 class="text-xl font-bold text-gray-900 dark:text-white">
+                        Aspiraasi Kampus
+                    </h1>
+                </div>
+                <nav class="flex-1 px-4 py-2 space-y-2">
+                    <a
+                        class="flex items-center gap-3 px-3 py-2 rounded text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800"
+                        href="dashboard.html"
+                    >
+                        <span class="material-symbols-outlined">dashboard</span>
+                        <span class="text-sm font-medium">Dashboard</span>
+                    </a>
+                    <a
+                        class="flex items-center gap-3 px-3 py-2 rounded text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800"
+                        href="list-pengaduan.html"
+                    >
+                        <span class="material-symbols-outlined">campaign</span>
+                        <span class="text-sm font-medium">Complaints</span>
+                    </a>
+                    <a
+                        class="flex items-center gap-3 px-3 py-2 rounded bg-primary/10 dark:bg-primary/20 text-primary"
+                        href="list-user.html"
+                    >
+                        <span class="material-symbols-outlined">group</span>
+                        <span class="text-sm font-medium">Users</span>
+                    </a>
+                    <a
+                        class="flex items-center gap-3 px-3 py-2 rounded text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800"
+                        href="setting.html"
+                    >
+                        <span class="material-symbols-outlined">settings</span>
+                        <span class="text-sm font-medium">Settings</span>
+                    </a>
+                    <a
+                        class="flex items-center gap-3 px-3 py-2 rounded text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800"
+                        href="#"
+                    >
+                        <span class="material-symbols-outlined">help</span>
+                        <span class="text-sm font-medium">Help</span>
+                    </a>
+                </nav>
+                <div class="p-4 mt-auto">
+                    <div class="flex items-center gap-3">
+                        <img
+                            alt="Admin Avatar"
+                            class="w-10 h-10 rounded-full"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuClX6PhBKTCueTSpDBYFN9c_HE6864r1DPN8JKnJ02l0DDpCf3wPZNUFlSUN_eMLcalfvZe27PG_-T62vAkieGimzCdJDCMSQCEi_p4Pf6GCVwuqXWtsnvdP9LjM3gZuw-DMVCnzeEHdaU_Z4vZZpfNbTUBBYbcAdJ1eQgRm-sKrphDJSZCjycG6ZZFy9HuPYuXWh_lR0T_WOHawyRJkI43dLVV4YV6sy1j8-cqOc2rtB13LYOC2aHPjlnT9jOlumDvBE7Hk0xIW0Te"
+                        />
+                        <div>
+                            <p
+                                class="text-sm font-medium text-gray-900 dark:text-white"
+                            >
+                                Admin Name
+                            </p>
+                            <a
+                                class="text-xs text-primary hover:underline"
+                                href="#"
+                                >Logout</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <main class="flex-1 p-8">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex items-center justify-between mb-8">
+                        <h2
+                            class="text-3xl font-bold text-gray-900 dark:text-white"
+                        >
+                            Users
+                        </h2>
+                        <button
+                            class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg shadow-sm hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                        >
+                            <span class="material-symbols-outlined">add</span>
+                            Add User
+                        </button>
+                    </div>
+                    <div class="mb-6">
+                        <div class="relative">
+                            <span
+                                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500"
+                                >search</span
+                            >
+                            <input
+                                class="w-full pl-10 pr-4 py-2 border rounded-lg bg-background-light dark:bg-gray-800 border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
+                                placeholder="Search users by name, email, or role"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="overflow-x-auto bg-background-light dark:bg-gray-900/50 rounded-lg border border-gray-200 dark:border-gray-800"
+                    >
+                        <table
+                            class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+                        >
+                            <thead
+                                class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-800 dark:text-gray-400"
+                            >
+                                <tr>
+                                    <th class="px-6 py-3" scope="col">Name</th>
+                                    <th class="px-6 py-3" scope="col">Role</th>
+                                    <th class="px-6 py-3" scope="col">
+                                        Contact
+                                    </th>
+                                    <th
+                                        class="px-6 py-3 text-right"
+                                        scope="col"
+                                    >
+                                        Actions
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    class="border-b dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                                >
+                                    <th
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                                        scope="row"
+                                    >
+                                        <div class="flex items-center gap-3">
+                                            <img
+                                                alt="Ethan Harper"
+                                                class="w-10 h-10 rounded-full"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtd5_auyTEE0C4dj46KPfIV2tnIKype4npxuwT9s2sbmtW_6FnFLLFG-j9nia7lKzTFLc67L6-KNNlpFLorU-HB_nGAwj0O6P5ONKDmbTQd8OGFIrrFDpwIB9BIdL2PDLuI1D45tBboLN1_mpaXWw83tp6ansAz2TqDaq-qJc3GRMnnIoniZIPBC_VLIRREtROxUH1pj_KXIWFHvpmB6m2RTs31s4bULIEXmjWjNx2eW_UCmciLYpxsa9EnIJ9091jHWwzCY1YJLUc"
+                                            />
+                                            <div>
+                                                <p class="font-semibold">
+                                                    Ethan Harper
+                                                </p>
+                                                <p
+                                                    class="text-xs text-gray-500 dark:text-gray-400"
+                                                >
+                                                    Student ID: 12345
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="px-2 py-1 text-xs font-medium rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300"
+                                            >Student</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <p>ethan.harper@email.com</p>
+                                        <p
+                                            class="text-xs text-gray-500 dark:text-gray-400"
+                                        >
+                                            555-123-4567
+                                        </p>
+                                    </td>
+                                    <td class="px-6 py-4 text-right space-x-2">
+                                        <button
+                                            class="p-1.5 rounded text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined text-base"
+                                                >edit</span
+                                            >
+                                        </button>
+                                        <button
+                                            class="p-1.5 rounded text-red-500 hover:bg-red-100 dark:hover:bg-red-900/50"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined text-base"
+                                                >delete</span
+                                            >
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="border-b dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                                >
+                                    <th
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                                        scope="row"
+                                    >
+                                        <div class="flex items-center gap-3">
+                                            <img
+                                                alt="Olivia Bennett"
+                                                class="w-10 h-10 rounded-full"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEP5rgMHkHhSPbSpKNPZUm34mRP1ndhp_-anYPtr5hx-0OgfCvkwguXBc5TKTY9_d-Wo7Utam-0pwCKmV22LYlIz-jEnC2wb_PYDo85UDs0wSxaIzEaqNsYccWjWisrxHBSzXJSMmwcGerNgVNubWLzvVpIzYV9kqME9LZeHaxxG-iuL0KdQdBgQe-KDqBM92rzGtgjC9glyJbICFG6Ml5GgJYFFM6BY672EbeO3JduxoDyTvZcPZgJZI7RwtCGB07kTh_EI9IFvFy"
+                                            />
+                                            <div>
+                                                <p class="font-semibold">
+                                                    Olivia Bennett
+                                                </p>
+                                                <p
+                                                    class="text-xs text-gray-500 dark:text-gray-400"
+                                                >
+                                                    Admin ID: A-54321
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+                                            >Admin</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <p>olivia.bennett@email.com</p>
+                                        <p
+                                            class="text-xs text-gray-500 dark:text-gray-400"
+                                        >
+                                            555-987-6543
+                                        </p>
+                                    </td>
+                                    <td class="px-6 py-4 text-right space-x-2">
+                                        <button
+                                            class="p-1.5 rounded text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined text-base"
+                                                >edit</span
+                                            >
+                                        </button>
+                                        <button
+                                            class="p-1.5 rounded text-red-500 hover:bg-red-100 dark:hover:bg-red-900/50"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined text-base"
+                                                >delete</span
+                                            >
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="border-b dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                                >
+                                    <th
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                                        scope="row"
+                                    >
+                                        <div class="flex items-center gap-3">
+                                            <img
+                                                alt="Noah Carter"
+                                                class="w-10 h-10 rounded-full"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2tJQA9xv1UzZSUIXbKoLppBVKsNICC9_X_np5ZnunbSQyxZVzFwEOaXyjx428EoTCq7mk7r7oGJ2LKUIJzt3cFLTIr3k8OZOKnZjVqXSJPQgTxottylyYM9zwTsZhg5vaPxcKbGFOzoTelZHe2-sVrOr67-TjIsdmQE8j_7SzTGPpKVyYZnvGbLPN2_gA6inAcVx2tAdIlSmY5M-vZyy-d3ClP_JImgLt9PfX0SV749YcnATxJb3GV5WEqIJSFOEKhbjfmn5zPlD1"
+                                            />
+                                            <div>
+                                                <p class="font-semibold">
+                                                    Noah Carter
+                                                </p>
+                                                <p
+                                                    class="text-xs text-gray-500 dark:text-gray-400"
+                                                >
+                                                    Student ID: 67890
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="px-2 py-1 text-xs font-medium rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300"
+                                            >Student</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <p>noah.carter@email.com</p>
+                                        <p
+                                            class="text-xs text-gray-500 dark:text-gray-400"
+                                        >
+                                            555-246-8013
+                                        </p>
+                                    </td>
+                                    <td class="px-6 py-4 text-right space-x-2">
+                                        <button
+                                            class="p-1.5 rounded text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined text-base"
+                                                >edit</span
+                                            >
+                                        </button>
+                                        <button
+                                            class="p-1.5 rounded text-red-500 hover:bg-red-100 dark:hover:bg-red-900/50"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined text-base"
+                                                >delete</span
+                                            >
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="border-b dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                                >
+                                    <th
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                                        scope="row"
+                                    >
+                                        <div class="flex items-center gap-3">
+                                            <img
+                                                alt="Ava Davis"
+                                                class="w-10 h-10 rounded-full"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcUUI2gDHFjn_PrUs3AFPeHyZUyUX2G5i5IPSFeJUpgv6mpzXeJ3R_SQXzlMtoS9sMSlNogEaS1hzSOSWKHle1SOZ0l8bWPx0b17Zp5_DBCpHuFtGeMvWeypbFmCpfmUaUPBjRq4ByMyniP-1H0PLSUDe7eMbz4lbm4GtXcMcs1vMiBuziXXTY1aeoYDTWj6sMiwx9uH3l2VmND3JZFXAYo3jufHD8V8YsOA7gFNhd57suboGvJohSGd85WRVuzsqGZ3r-PCeFjw_y"
+                                            />
+                                            <div>
+                                                <p class="font-semibold">
+                                                    Ava Davis
+                                                </p>
+                                                <p
+                                                    class="text-xs text-gray-500 dark:text-gray-400"
+                                                >
+                                                    Student ID: 11223
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="px-2 py-1 text-xs font-medium rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300"
+                                            >Student</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <p>ava.davis@email.com</p>
+                                        <p
+                                            class="text-xs text-gray-500 dark:text-gray-400"
+                                        >
+                                            555-369-1215
+                                        </p>
+                                    </td>
+                                    <td class="px-6 py-4 text-right space-x-2">
+                                        <button
+                                            class="p-1.5 rounded text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined text-base"
+                                                >edit</span
+                                            >
+                                        </button>
+                                        <button
+                                            class="p-1.5 rounded text-red-500 hover:bg-red-100 dark:hover:bg-red-900/50"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined text-base"
+                                                >delete</span
+                                            >
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                                >
+                                    <th
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                                        scope="row"
+                                    >
+                                        <div class="flex items-center gap-3">
+                                            <img
+                                                alt="Liam Evans"
+                                                class="w-10 h-10 rounded-full"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDvbsUfHcfWcMTd6QcYEYBW_iugZVhX5KUuws3nXzI97KEStgkXQxarQ6MR9N2UOkTXqZ-4xYyr2JdfxhUpzpHTfoum-n4CigD_4HXrX4aTUyDlI32lyiDNb4GX_yP5RbGftUtkldkTrDkz7KRL0qPplupyod9u8b4-BQgAwDTn4wDemm-dRYb0oYAMXXU2jiL1vchtkmYomT1RqdEjA2rQc8YJiu1G9NqKREiqr3Nval7lCH7Fqr1_ixpD56Zcp7A4uZ8RrFEUPTF"
+                                            />
+                                            <div>
+                                                <p class="font-semibold">
+                                                    Liam Evans
+                                                </p>
+                                                <p
+                                                    class="text-xs text-gray-500 dark:text-gray-400"
+                                                >
+                                                    Admin ID: A-98765
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+                                            >Admin</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <p>liam.evans@email.com</p>
+                                        <p
+                                            class="text-xs text-gray-500 dark:text-gray-400"
+                                        >
+                                            555-482-3457
+                                        </p>
+                                    </td>
+                                    <td class="px-6 py-4 text-right space-x-2">
+                                        <button
+                                            class="p-1.5 rounded text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined text-base"
+                                                >edit</span
+                                            >
+                                        </button>
+                                        <button
+                                            class="p-1.5 rounded text-red-500 hover:bg-red-100 dark:hover:bg-red-900/50"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined text-base"
+                                                >delete</span
+                                            >
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+                        <span class="text-sm text-gray-700 dark:text-gray-400"
+                            >Showing 1 to 5 of 20 results</span
+                        >
+                        <div class="inline-flex -space-x-px text-sm">
+                            <button
+                                class="flex items-center justify-center px-3 h-8 text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                            >
+                                Previous
+                            </button>
+                            <button
+                                class="flex items-center justify-center px-3 h-8 text-primary bg-primary/10 border border-gray-300 hover:bg-primary/20 hover:text-primary dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+                            >
+                                1
+                            </button>
+                            <button
+                                class="flex items-center justify-center px-3 h-8 text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                            >
+                                2
+                            </button>
+                            <button
+                                class="flex items-center justify-center px-3 h-8 text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                            >
+                                3
+                            </button>
+                            <button
+                                class="flex items-center justify-center px-3 h-8 text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                            >
+                                Next
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

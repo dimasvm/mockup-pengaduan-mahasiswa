@@ -1,0 +1,437 @@
+<!doctype html>
+<html class="dark" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Stitch Design</title>
+        <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: "#1173d4",
+                            "background-light": "#f6f7f8",
+                            "background-dark": "#101922",
+                        },
+                        fontFamily: {
+                            display: ["Inter"],
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.25rem",
+                            lg: "0.5rem",
+                            xl: "0.75rem",
+                            full: "9999px",
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body
+        class="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200"
+    >
+        <div class="flex flex-col min-h-screen">
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-gray-200 dark:border-gray-800 px-10 py-3"
+            >
+                <div class="flex items-center gap-4">
+                    <div class="w-8 h-8 text-primary">
+                        <svg
+                            fill="none"
+                            viewBox="0 0 48 48"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <g clip-path="url(#clip0_6_319)">
+                                <path
+                                    d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
+                                    fill="currentColor"
+                                ></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_6_319">
+                                    <rect
+                                        fill="white"
+                                        height="48"
+                                        width="48"
+                                    ></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h2 class="text-lg font-bold text-gray-900 dark:text-white">
+                        Acme Co
+                    </h2>
+                </div>
+                <nav class="flex flex-1 justify-end items-center gap-8">
+                    <div class="flex items-center gap-6">
+                        <a
+                            class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
+                            href="dashboard.html"
+                            >Dashboard</a
+                        >
+                        <a
+                            class="text-sm font-medium text-primary dark:text-primary font-bold"
+                            href="#"
+                            >Complaints</a
+                        >
+                        <a
+                            class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
+                            href="#"
+                            >Students</a
+                        >
+                        <a
+                            class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
+                            href="#"
+                            >Reports</a
+                        >
+                    </div>
+                    <div
+                        class="w-10 h-10 rounded-full bg-cover bg-center"
+                        style="
+                            background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDcmjAIPpo-CTpCU0fPKsl73xPBa_GHw2iQJlN8bu9NiFN5VTGwY4oNmbO21juztUYt3nUxrWiCdIy8rMZdddniYer4wl5-GA4flbKNgZ_DECGiuAueRsLQ3IrmY3f_0Xr9mbVCB5u2e_6Sm3iRFoBRqA0_wQ-3iR8XR5ZVkdh-TMMWv8eb_5XveknOdi1WyhvmayL5LDYxMKRPAhstyRuCzwPjt0_SK43h3ICHj_nXDJozmL4_lsKuKH9p2e0ldPUMHGKg83a70BDp&quot;);
+                        "
+                    ></div>
+                </nav>
+            </header>
+            <main class="flex-1 px-10 py-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-8">
+                        <div class="flex flex-col gap-1">
+                            <h1
+                                class="text-3xl font-bold text-gray-900 dark:text-white"
+                            >
+                                Complaint Details
+                            </h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">
+                                Complaint ID: #12345
+                            </p>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-gray-900/50 p-6 rounded-lg border border-gray-200 dark:border-gray-800"
+                        >
+                            <h3
+                                class="text-lg font-bold mb-4 text-gray-900 dark:text-white"
+                            >
+                                Complaint Information
+                            </h3>
+                            <div
+                                class="divide-y divide-gray-200 dark:divide-gray-800"
+                            >
+                                <div class="py-4 grid grid-cols-4 gap-4">
+                                    <p
+                                        class="text-sm font-medium text-gray-500 dark:text-gray-400"
+                                    >
+                                        Subject
+                                    </p>
+                                    <p
+                                        class="col-span-3 text-sm text-gray-800 dark:text-gray-200"
+                                    >
+                                        Noise Complaint
+                                    </p>
+                                </div>
+                                <div class="py-4 grid grid-cols-4 gap-4">
+                                    <p
+                                        class="text-sm font-medium text-gray-500 dark:text-gray-400"
+                                    >
+                                        Submitted
+                                    </p>
+                                    <p
+                                        class="col-span-3 text-sm text-gray-800 dark:text-gray-200"
+                                    >
+                                        October 26, 2023
+                                    </p>
+                                </div>
+                                <div class="py-4 grid grid-cols-4 gap-4">
+                                    <p
+                                        class="text-sm font-medium text-gray-500 dark:text-gray-400"
+                                    >
+                                        Status
+                                    </p>
+                                    <div class="col-span-3">
+                                        <span
+                                            class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary"
+                                            >Open</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="py-4 grid grid-cols-4 gap-4">
+                                    <p
+                                        class="text-sm font-medium text-gray-500 dark:text-gray-400"
+                                    >
+                                        Description
+                                    </p>
+                                    <p
+                                        class="col-span-3 text-sm text-gray-800 dark:text-gray-200"
+                                    >
+                                        A student reported excessive noise
+                                        coming from the dormitory next door,
+                                        disrupting their studies and sleep. The
+                                        noise is described as loud music and
+                                        shouting, occurring frequently during
+                                        late hours.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-gray-900/50 p-6 rounded-lg border border-gray-200 dark:border-gray-800"
+                        >
+                            <h3
+                                class="text-lg font-bold mb-4 text-gray-900 dark:text-white"
+                            >
+                                Attachments
+                            </h3>
+                            <div
+                                class="aspect-video w-full rounded-lg bg-cover bg-center"
+                                style="
+                                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCSAbKyT1JRKI929RcFd7PaPJHXtXt6E73xT8YiAXn6xtkM6gxKVFaU_loE7qJ1JL-brQ6w5wNPHtgyI1XpCbC7tpa9c99UuJf47VjofzaWS6m8AvqlZxZt0LiKobg2GQlxeGuLzDhZPuxPzY8slig9RgJlSmyJr7ym6KvTuzTZUxtFA6ZRKpvIflzBDEkFGs69uw2MrNpj9v7D7tLBl3nmqoa1UdyVfYgjMt4WtCi_mzvwZIR7Hv-dT-7wkXHQmmhGRST6ZwjBSxZW&quot;);
+                                "
+                            ></div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-gray-900/50 p-6 rounded-lg border border-gray-200 dark:border-gray-800"
+                        >
+                            <h3
+                                class="text-lg font-bold mb-4 text-gray-900 dark:text-white"
+                            >
+                                Student Information
+                            </h3>
+                            <div
+                                class="divide-y divide-gray-200 dark:divide-gray-800"
+                            >
+                                <div class="py-4 grid grid-cols-4 gap-4">
+                                    <p
+                                        class="text-sm font-medium text-gray-500 dark:text-gray-400"
+                                    >
+                                        Name
+                                    </p>
+                                    <p
+                                        class="col-span-3 text-sm text-gray-800 dark:text-gray-200"
+                                    >
+                                        Emily Carter
+                                    </p>
+                                </div>
+                                <div class="py-4 grid grid-cols-4 gap-4">
+                                    <p
+                                        class="text-sm font-medium text-gray-500 dark:text-gray-400"
+                                    >
+                                        Student ID
+                                    </p>
+                                    <p
+                                        class="col-span-3 text-sm text-gray-800 dark:text-gray-200"
+                                    >
+                                        S1234567
+                                    </p>
+                                </div>
+                                <div class="py-4 grid grid-cols-4 gap-4">
+                                    <p
+                                        class="text-sm font-medium text-gray-500 dark:text-gray-400"
+                                    >
+                                        Contact
+                                    </p>
+                                    <p
+                                        class="col-span-3 text-sm text-gray-800 dark:text-gray-200"
+                                    >
+                                        emily.carter@email.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-gray-900/50 p-6 rounded-lg border border-gray-200 dark:border-gray-800"
+                        >
+                            <h3
+                                class="text-lg font-bold mb-4 text-gray-900 dark:text-white"
+                            >
+                                Action History
+                            </h3>
+                            <div class="relative pl-8">
+                                <div
+                                    class="absolute left-0 h-full w-0.5 bg-gray-200 dark:bg-gray-700 ml-4"
+                                ></div>
+                                <div class="relative mb-8">
+                                    <div
+                                        class="absolute -left-8 top-1.5 flex items-center justify-center bg-background-light dark:bg-background-dark"
+                                    >
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-primary/20 dark:bg-primary/30 flex items-center justify-center text-primary"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined text-lg"
+                                                >description</span
+                                            >
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="font-medium text-gray-800 dark:text-gray-200"
+                                    >
+                                        Complaint Submitted
+                                    </p>
+                                    <p
+                                        class="text-sm text-gray-500 dark:text-gray-400"
+                                    >
+                                        October 26, 2023
+                                    </p>
+                                </div>
+                                <div class="relative mb-8">
+                                    <div
+                                        class="absolute -left-8 top-1.5 flex items-center justify-center bg-background-light dark:bg-background-dark"
+                                    >
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-primary/20 dark:bg-primary/30 flex items-center justify-center text-primary"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined text-lg"
+                                                >search</span
+                                            >
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="font-medium text-gray-800 dark:text-gray-200"
+                                    >
+                                        Complaint Reviewed
+                                    </p>
+                                    <p
+                                        class="text-sm text-gray-500 dark:text-gray-400"
+                                    >
+                                        October 27, 2023
+                                    </p>
+                                </div>
+                                <div class="relative">
+                                    <div
+                                        class="absolute -left-8 top-1.5 flex items-center justify-center bg-background-light dark:bg-background-dark"
+                                    >
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-primary/20 dark:bg-primary/30 flex items-center justify-center text-primary"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined text-lg"
+                                                >check</span
+                                            >
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="font-medium text-gray-800 dark:text-gray-200"
+                                    >
+                                        Status Updated
+                                    </p>
+                                    <p
+                                        class="text-sm text-gray-500 dark:text-gray-400"
+                                    >
+                                        October 27, 2023
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-gray-900/50 p-6 rounded-lg border border-gray-200 dark:border-gray-800"
+                        >
+                            <h3
+                                class="text-lg font-bold mb-4 text-gray-900 dark:text-white"
+                            >
+                                Notes
+                            </h3>
+                            <div class="space-y-6">
+                                <div class="flex gap-4">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-700 shrink-0"
+                                    ></div>
+                                    <div class="flex-1">
+                                        <div
+                                            class="flex items-center gap-2 mb-1"
+                                        >
+                                            <p
+                                                class="text-sm font-bold text-gray-900 dark:text-white"
+                                            >
+                                                Admin User
+                                            </p>
+                                            <p
+                                                class="text-xs text-gray-500 dark:text-gray-400"
+                                            >
+                                                October 27, 2023
+                                            </p>
+                                        </div>
+                                        <p
+                                            class="text-sm text-gray-600 dark:text-gray-300"
+                                        >
+                                            Initial review completed. Contacted
+                                            the student for additional details.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-cover bg-center"
+                                        style="
+                                            background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDcmjAIPpo-CTpCU0fPKsl73xPBa_GHw2iQJlN8bu9NiFN5VTGwY4oNmbO21juztUYt3nUxrWiCdIy8rMZdddniYer4wl5-GA4flbKNgZ_DECGiuAueRsLQ3IrmY3f_0Xr9mbVCB5u2e_6Sm3iRFoBRqA0_wQ-3iR8XR5ZVkdh-TMMWv8eb_5XveknOdi1WyhvmayL5LDYxMKRPAhstyRuCzwPjt0_SK43h3ICHj_nXDJozmL4_lsKuKH9p2e0ldPUMHGKg83a70BDp&quot;);
+                                        "
+                                    ></div>
+                                    <div class="flex-1">
+                                        <textarea
+                                            class="form-textarea w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary text-sm placeholder-gray-400 dark:placeholder-gray-500"
+                                            placeholder="Add a note..."
+                                        ></textarea>
+                                        <div class="flex justify-end mt-2">
+                                            <button
+                                                class="px-4 py-2 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:ring-offset-background-dark"
+                                            >
+                                                Add Note
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="lg:col-span-1 space-y-6 lg:sticky lg:top-8 self-start"
+                    >
+                        <div
+                            class="bg-white dark:bg-gray-900/50 p-6 rounded-lg border border-gray-200 dark:border-gray-800"
+                        >
+                            <h3
+                                class="text-lg font-bold mb-4 text-gray-900 dark:text-white"
+                            >
+                                Actions
+                            </h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <label
+                                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                        for="status"
+                                        >Status</label
+                                    >
+                                    <select
+                                        class="form-select w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary text-sm"
+                                        id="status"
+                                    >
+                                        <option>Open</option>
+                                        <option>In Progress</option>
+                                        <option>Resolved</option>
+                                        <option>Closed</option>
+                                    </select>
+                                </div>
+                                <button
+                                    class="w-full px-4 py-2 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:ring-offset-background-dark"
+                                >
+                                    Save Changes
+                                </button>
+                                <button
+                                    class="w-full px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-medium rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 dark:ring-offset-background-dark"
+                                >
+                                    Contact Student
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
